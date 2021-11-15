@@ -110,8 +110,10 @@ public class MainActivity extends AppCompatActivity {
                 * and set value to the list item selected
                 * only in case edit text is not empty
                 * */
-                if (!editSelected.getText().toString().isEmpty())
+                if (!editSelected.getText().toString().isEmpty()) {
                     toDoList.set(toDoList.indexOf(value), editSelected.getText().toString());
+                    refreshList();
+                }
                 dialog.dismiss();
             });
             dialog.show();
